@@ -29,6 +29,7 @@ export interface ProductionIndent {
   isProductionCompleted?: boolean
   productionActualConsumption?: any[]
   productionWastage?: any[]
+  createdAt?: string
 }
 
 export interface RawMaterial {
@@ -96,6 +97,7 @@ export const initialIndents: ProductionIndent[] = [
     expectedDispatchDate: "2026-01-20",
     priority: "Urgent",
     status: "Generated",
+    createdAt: "2026-01-16T09:00:00Z",
   },
   {
     id: "2",
@@ -108,6 +110,7 @@ export const initialIndents: ProductionIndent[] = [
     expectedDispatchDate: "2026-01-22",
     priority: "Normal",
     status: "Generated",
+    createdAt: "2026-01-16T10:30:00Z",
   },
   {
     id: "3",
@@ -120,6 +123,7 @@ export const initialIndents: ProductionIndent[] = [
     expectedDispatchDate: "2026-01-25",
     priority: "Normal",
     status: "Generated",
+    createdAt: "2026-01-15T14:20:00Z",
   },
   {
     id: "4",
@@ -132,6 +136,7 @@ export const initialIndents: ProductionIndent[] = [
     expectedDispatchDate: "2026-01-18",
     priority: "Urgent",
     status: "Generated",
+    createdAt: "2026-01-14T11:00:00Z",
   },
   {
     id: "5",
@@ -144,6 +149,7 @@ export const initialIndents: ProductionIndent[] = [
     expectedDispatchDate: "2026-01-28",
     priority: "Normal",
     status: "Generated",
+    createdAt: "2026-01-13T16:45:00Z",
   },
   {
     id: "6",
@@ -156,6 +162,7 @@ export const initialIndents: ProductionIndent[] = [
     expectedDispatchDate: "2026-01-30",
     priority: "Urgent",
     status: "Generated",
+    createdAt: "2026-01-16T08:15:00Z",
   },
   {
     id: "7",
@@ -168,6 +175,7 @@ export const initialIndents: ProductionIndent[] = [
     expectedDispatchDate: "2026-02-01",
     priority: "Normal",
     status: "Generated",
+    createdAt: "2026-01-12T09:30:00Z",
   },
   {
     id: "8",
@@ -180,6 +188,7 @@ export const initialIndents: ProductionIndent[] = [
     expectedDispatchDate: "2026-02-03",
     priority: "Urgent",
     status: "Generated",
+    createdAt: "2026-01-16T11:45:00Z",
   },
   {
     id: "9",
@@ -192,6 +201,7 @@ export const initialIndents: ProductionIndent[] = [
     expectedDispatchDate: "2026-02-05",
     priority: "Normal",
     status: "Generated",
+    createdAt: "2026-01-11T14:00:00Z",
   },
 ]
 
