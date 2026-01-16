@@ -54,7 +54,14 @@ export function ProductionProvider({ children }: { children: ReactNode }) {
       try {
         const parsed = JSON.parse(saved)
         if (parsed.indents) setIndents(parsed.indents)
-        if (parsed.rawMaterials) setRawMaterials(parsed.rawMaterials)
+        if (parsed.rawMaterials) {
+          const isOldData = parsed.rawMaterials.some((rm: any) => rm.name === "Rice Bran")
+          if (isOldData) {
+            setRawMaterials(initialRawMaterials)
+          } else {
+            setRawMaterials(parsed.rawMaterials)
+          }
+        }
         if (parsed.qualityApproval) setQualityApproval(parsed.qualityApproval)
         if (parsed.packingReceipt) setPackingReceipt(parsed.packingReceipt)
         if (parsed.consumption) setConsumption(parsed.consumption)

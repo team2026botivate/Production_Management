@@ -394,14 +394,12 @@ export default function PackingProductionPage() {
                                     <SelectValue placeholder="Select wastage source" />
                                   </SelectTrigger>
                                   <SelectContent className="rounded-2xl border-border/40 font-medium">
-                                    <SelectItem value="Spillover" className="rounded-xl focus:bg-primary/5 focus:text-primary">Spillover</SelectItem>
-                                    <SelectItem value="Sampling / Lab Testing" className="rounded-xl focus:bg-primary/5 focus:text-primary">Sampling / Lab Testing</SelectItem>
-                                    <SelectItem value="Equipment Wash" className="rounded-xl focus:bg-primary/5 focus:text-primary">Equipment Wash</SelectItem>
-                                    <SelectItem value="Filter Press Loss" className="rounded-xl focus:bg-primary/5 focus:text-primary">Filter Press Loss</SelectItem>
-                                    <SelectItem value="Pipe Leakage" className="rounded-xl focus:bg-primary/5 focus:text-primary">Pipe Leakage</SelectItem>
-                                    <SelectItem value="Tank Bottom Sediment" className="rounded-xl focus:bg-primary/5 focus:text-primary">Tank Bottom Sediment</SelectItem>
-                                    <SelectItem value="Evaporation Loss" className="rounded-xl focus:bg-primary/5 focus:text-primary">Evaporation Loss</SelectItem>
-                                    <SelectItem value="Handling Loss" className="rounded-xl focus:bg-primary/5 focus:text-primary">Handling Loss</SelectItem>
+                                    <SelectItem value="Rope" className="rounded-xl focus:bg-primary/5 focus:text-primary">Rope</SelectItem>
+                                    <SelectItem value="Cartoon" className="rounded-xl focus:bg-primary/5 focus:text-primary">Cartoon</SelectItem>
+                                    <SelectItem value="Tin" className="rounded-xl focus:bg-primary/5 focus:text-primary">Tin</SelectItem>
+                                    <SelectItem value="Sticker" className="rounded-xl focus:bg-primary/5 focus:text-primary">Sticker</SelectItem>
+                                    <SelectItem value="Pouch" className="rounded-xl focus:bg-primary/5 focus:text-primary">Pouch</SelectItem>
+                                    <SelectItem value="Oil Loss" className="rounded-xl focus:bg-primary/5 focus:text-primary">Oil Loss (Spillage)</SelectItem>
                                     <SelectItem value="Other" className="rounded-xl focus:bg-primary/5 focus:text-primary">Other</SelectItem>
                                   </SelectContent>
                                 </Select>
