@@ -251,18 +251,22 @@ export default function BOMValidationPage() {
               <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 overflow-y-auto pr-2 custom-scrollbar">
                 <div className="space-y-6">
                   {/* Indent Details Row */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-6 border-y border-border/60 bg-white/50 rounded-2xl px-8 mb-6">
-                    <div className="space-y-1">
+                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 py-4 border-y border-border/60 bg-white/50 rounded-2xl px-6 mb-6">
+                    <div className="space-y-0.5 min-w-0">
                       <p className="text-[10px] uppercase tracking-widest text-muted-foreground font-black">Indent No</p>
-                      <p className="text-2xl font-black text-primary">{selectedIndent.productionIndentNo}</p>
+                      <p className="text-lg font-black text-primary truncate">{selectedIndent.productionIndentNo}</p>
                     </div>
-                    <div className="space-y-1">
+                    <div className="space-y-0.5 min-w-0">
+                      <p className="text-[10px] uppercase tracking-widest text-muted-foreground font-black">Party Name</p>
+                      <p className="text-lg font-black text-foreground truncate" title={selectedIndent.partyName}>{selectedIndent.partyName}</p>
+                    </div>
+                    <div className="space-y-0.5 min-w-0">
                       <p className="text-[10px] uppercase tracking-widest text-muted-foreground font-black">Product Name</p>
-                      <p className="text-2xl font-black text-foreground">{selectedIndent.productName}</p>
+                      <p className="text-lg font-black text-foreground truncate" title={selectedIndent.productName}>{selectedIndent.productName}</p>
                     </div>
-                     <div className="space-y-1">
-                       <p className="text-[10px] uppercase tracking-widest text-muted-foreground font-black">Planned Qty (MT)</p>
-                       <p className="text-2xl font-black text-foreground/80">{selectedIndent.plannedQuantity}</p>
+                     <div className="space-y-0.5 min-w-0">
+                       <p className="text-[10px] uppercase tracking-widest text-muted-foreground font-black">Planned Qty</p>
+                       <p className="text-lg font-black text-foreground/80 truncate">{selectedIndent.plannedQuantity} MT</p>
                      </div>
                   </div>
 

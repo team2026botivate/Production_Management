@@ -246,18 +246,22 @@ export default function PackingReceiptPage() {
               <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 overflow-y-auto pr-2 custom-scrollbar">
                 <div className="space-y-8">
                   {/* Indent Details Row */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-6 border-y border-border/60 bg-white/50 rounded-2xl px-8 mb-4">
-                    <div className="space-y-1">
+                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 py-4 border-y border-border/60 bg-white/50 rounded-2xl px-6 mb-4">
+                    <div className="space-y-0.5 min-w-0">
                       <p className="text-[10px] uppercase tracking-widest text-muted-foreground font-black">Indent No</p>
-                      <p className="text-2xl font-black text-primary">{selectedIndentRecord.productionIndentNo}</p>
+                      <p className="text-lg font-black text-primary truncate">{selectedIndentRecord.productionIndentNo}</p>
                     </div>
-                    <div className="space-y-1">
+                    <div className="space-y-0.5 min-w-0">
+                      <p className="text-[10px] uppercase tracking-widest text-muted-foreground font-black">Party Name</p>
+                      <p className="text-lg font-black text-foreground truncate" title={selectedIndentRecord.partyName}>{selectedIndentRecord.partyName}</p>
+                    </div>
+                    <div className="space-y-0.5 min-w-0">
                       <p className="text-[10px] uppercase tracking-widest text-muted-foreground font-black">Product Name</p>
-                      <p className="text-2xl font-black text-foreground">{selectedIndentRecord.productName}</p>
+                      <p className="text-lg font-black text-foreground truncate" title={selectedIndentRecord.productName}>{selectedIndentRecord.productName}</p>
                     </div>
-                    <div className="space-y-1">
+                    <div className="space-y-0.5 min-w-0">
                       <p className="text-[10px] uppercase tracking-widest text-muted-foreground font-black">Planned Qty</p>
-                      <p className="text-2xl font-black text-foreground/80">{selectedIndentRecord.plannedQuantity} MT</p>
+                      <p className="text-lg font-black text-foreground/80 truncate">{selectedIndentRecord.plannedQuantity} MT</p>
                     </div>
                   </div>
 
