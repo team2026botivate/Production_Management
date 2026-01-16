@@ -9,6 +9,26 @@ export interface ProductionIndent {
   expectedDispatchDate: string
   priority: "Normal" | "Urgent"
   status: "Generated" | "Approved" | "Issued" | "Completed"
+  isBomValidated?: boolean
+  bomStatus?: string
+  bomRemarks?: string
+  isQualityApproved?: boolean
+  qualityStatus?: string
+  qualityRemarks?: string
+  qualityBatchNo?: string
+  qualityIssueDate?: string
+  qualityIssuedBy?: string
+  qualityIssuedQty?: number
+  isPackingReceiptGenerated?: boolean
+  grnSlipNo?: string
+  receiptUrl?: string
+  receiptDate?: string
+  receiptTime?: string
+  receiptReceiverName?: string
+  receiptReceivedQty?: number
+  isProductionCompleted?: boolean
+  productionActualConsumption?: any[]
+  productionWastage?: any[]
 }
 
 export interface RawMaterial {
@@ -111,6 +131,66 @@ export const initialIndents: ProductionIndent[] = [
     packingType: "Tin",
     expectedDispatchDate: "2026-01-18",
     priority: "Urgent",
+    status: "Generated",
+  },
+  {
+    id: "5",
+    productionIndentNo: "PI-001249",
+    dispatchPlanRefNo: "DP-2026-005",
+    partyName: "Global Mart",
+    productName: "Soya Bean Oil",
+    plannedQuantity: 35,
+    packingType: "Pouch",
+    expectedDispatchDate: "2026-01-28",
+    priority: "Normal",
+    status: "Generated",
+  },
+  {
+    id: "6",
+    productionIndentNo: "PI-001250",
+    dispatchPlanRefNo: "DP-2026-006",
+    partyName: "Pure Organics Ltd",
+    productName: "Olive Oil",
+    plannedQuantity: 10,
+    packingType: "Tin",
+    expectedDispatchDate: "2026-01-30",
+    priority: "Urgent",
+    status: "Generated",
+  },
+  {
+    id: "7",
+    productionIndentNo: "PI-001251",
+    dispatchPlanRefNo: "DP-2026-007",
+    partyName: "Quality Foods Co.",
+    productName: "Mustard Oil",
+    plannedQuantity: 60,
+    packingType: "Barrel",
+    expectedDispatchDate: "2026-02-01",
+    priority: "Normal",
+    status: "Generated",
+  },
+  {
+    id: "8",
+    productionIndentNo: "PI-001252",
+    dispatchPlanRefNo: "DP-2026-008",
+    partyName: "Elite Retailers",
+    productName: "Coconut Oil",
+    plannedQuantity: 20,
+    packingType: "Pouch",
+    expectedDispatchDate: "2026-02-03",
+    priority: "Urgent",
+    status: "Generated",
+  },
+  {
+    id: "9",
+    productionIndentNo: "PI-001253",
+    dispatchPlanRefNo: "DP-2026-009",
+    partyName: "Sunrise Wholesalers",
+    productName: "Sunflower Oil",
+    plannedQuantity: 45,
+    packingType: "Tin",
+    expectedDispatchDate: "2026-02-05",
+    priority: "Normal",
     status: "Generated",
   },
 ]

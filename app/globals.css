@@ -5,81 +5,76 @@
 
 /* Enterprise ERP dark theme with teal accent */
 :root {
-  --background: oklch(0.13 0.01 240);
-  --foreground: oklch(0.95 0 0);
-  --card: oklch(0.17 0.01 240);
-  --card-foreground: oklch(0.95 0 0);
-  --popover: oklch(0.17 0.01 240);
-  --popover-foreground: oklch(0.95 0 0);
-  --primary: oklch(0.72 0.15 175);
-  --primary-foreground: oklch(0.13 0.01 240);
-  --secondary: oklch(0.22 0.01 240);
-  --secondary-foreground: oklch(0.95 0 0);
-  --muted: oklch(0.22 0.01 240);
-  --muted-foreground: oklch(0.65 0 0);
-  --accent: oklch(0.72 0.15 175);
-  --accent-foreground: oklch(0.13 0.01 240);
-  --destructive: oklch(0.55 0.22 25);
-  --destructive-foreground: oklch(0.95 0 0);
-  --border: oklch(0.28 0.01 240);
-  --input: oklch(0.22 0.01 240);
-  --ring: oklch(0.72 0.15 175);
-  --chart-1: oklch(0.72 0.15 175);
-  --chart-2: oklch(0.65 0.18 280);
-  --chart-3: oklch(0.75 0.18 85);
-  --chart-4: oklch(0.65 0.15 340);
-  --chart-5: oklch(0.6 0.2 35);
-  --radius: 0.5rem;
-  --sidebar: oklch(0.15 0.01 240);
-  --sidebar-foreground: oklch(0.95 0 0);
-  --sidebar-primary: oklch(0.72 0.15 175);
-  --sidebar-primary-foreground: oklch(0.13 0.01 240);
-  --sidebar-accent: oklch(0.22 0.01 240);
-  --sidebar-accent-foreground: oklch(0.95 0 0);
-  --sidebar-border: oklch(0.28 0.01 240);
-  --sidebar-ring: oklch(0.72 0.15 175);
-  --success: oklch(0.72 0.19 145);
-  --warning: oklch(0.8 0.16 85);
+  --background: oklch(0.99 0.005 240);
+  --foreground: oklch(0.2 0.05 240);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2 0.05 240);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2 0.05 240);
+  --primary: oklch(0.6 0.18 250);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.96 0.01 240);
+  --secondary-foreground: oklch(0.2 0.05 240);
+  --muted: oklch(0.96 0.01 240);
+  --muted-foreground: oklch(0.5 0.02 240);
+  --accent: oklch(0.96 0.01 240);
+  --accent-foreground: oklch(0.6 0.18 250);
+  --destructive: oklch(0.6 0.18 25);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.93 0.01 240);
+  --input: oklch(0.93 0.01 240);
+  --ring: oklch(0.6 0.18 250);
+  --chart-1: oklch(0.6 0.18 250);
+  --chart-2: oklch(0.5 0.15 280);
+  --chart-3: oklch(0.7 0.15 150);
+  --chart-4: oklch(0.4 0.15 320);
+  --chart-5: oklch(0.6 0.15 30);
+  --radius: 0.75rem;
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.4 0.05 240);
+  --sidebar-primary: oklch(0.6 0.18 250);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.98 0.005 240);
+  --sidebar-accent-foreground: oklch(0.6 0.18 250);
+  --sidebar-border: oklch(0.95 0.01 240);
+  --sidebar-ring: oklch(0.6 0.18 250);
+  --success: oklch(0.62 0.17 145);
+  --warning: oklch(0.78 0.14 85);
 }
 
 .dark {
-  --background: oklch(0.13 0.01 240);
-  --foreground: oklch(0.95 0 0);
-  --card: oklch(0.17 0.01 240);
-  --card-foreground: oklch(0.95 0 0);
-  --popover: oklch(0.17 0.01 240);
-  --popover-foreground: oklch(0.95 0 0);
-  --primary: oklch(0.72 0.15 175);
-  --primary-foreground: oklch(0.13 0.01 240);
-  --secondary: oklch(0.22 0.01 240);
-  --secondary-foreground: oklch(0.95 0 0);
-  --muted: oklch(0.22 0.01 240);
-  --muted-foreground: oklch(0.65 0 0);
-  --accent: oklch(0.72 0.15 175);
-  --accent-foreground: oklch(0.13 0.01 240);
+  --background: oklch(0.12 0.03 260);
+  --foreground: oklch(0.98 0.01 260);
+  --card: oklch(0.15 0.03 260);
+  --card-foreground: oklch(0.98 0.01 260);
+  --popover: oklch(0.15 0.03 260);
+  --popover-foreground: oklch(0.98 0.01 260);
+  --primary: oklch(0.6 0.18 250);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.18 0.03 260);
+  --secondary-foreground: oklch(0.98 0.01 260);
+  --muted: oklch(0.18 0.03 260);
+  --muted-foreground: oklch(0.65 0.02 260);
+  --accent: oklch(0.18 0.03 260);
+  --accent-foreground: oklch(0.98 0.01 260);
   --destructive: oklch(0.55 0.22 25);
   --destructive-foreground: oklch(0.95 0 0);
-  --border: oklch(0.28 0.01 240);
-  --input: oklch(0.22 0.01 240);
-  --ring: oklch(0.72 0.15 175);
-  --chart-1: oklch(0.72 0.15 175);
-  --chart-2: oklch(0.65 0.18 280);
-  --chart-3: oklch(0.75 0.18 85);
-  --chart-4: oklch(0.65 0.15 340);
-  --chart-5: oklch(0.6 0.2 35);
-  --sidebar: oklch(0.15 0.01 240);
+  --border: oklch(0.22 0.03 260);
+  --input: oklch(0.22 0.03 260);
+  --ring: oklch(0.6 0.18 250);
+  --sidebar: oklch(0.13 0.03 260);
   --sidebar-foreground: oklch(0.95 0 0);
-  --sidebar-primary: oklch(0.72 0.15 175);
-  --sidebar-primary-foreground: oklch(0.13 0.01 240);
-  --sidebar-accent: oklch(0.22 0.01 240);
+  --sidebar-primary: oklch(0.6 0.18 250);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.18 0.03 260);
   --sidebar-accent-foreground: oklch(0.95 0 0);
-  --sidebar-border: oklch(0.28 0.01 240);
-  --sidebar-ring: oklch(0.72 0.15 175);
+  --sidebar-border: oklch(0.22 0.03 260);
+  --sidebar-ring: oklch(0.6 0.18 250);
 }
 
 @theme inline {
-  --font-sans: "Geist", "Geist Fallback";
-  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --font-inter: var(--font-inter);
+  --font-mono: var(--font-mono);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -126,5 +121,32 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-image: radial-gradient(
+        at 0% 0%,
+        oklch(0.97 0.02 250) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 100% 0%, oklch(0.97 0.02 250) 0px, transparent 50%);
+    background-attachment: fixed;
   }
+}
+
+/* Ensure scrollbars are visible in Select dropdowns */
+[data-slot="select-content"] > div {
+  scrollbar-width: thin !important;
+  scrollbar-color: oklch(0.65 0.02 260) transparent !important;
+}
+
+[data-slot="select-content"] > div::-webkit-scrollbar {
+  width: 5px !important;
+  display: block !important;
+}
+
+[data-slot="select-content"] > div::-webkit-scrollbar-thumb {
+  background-color: oklch(0.65 0.02 260 / 0.6) !important;
+  border-radius: 10px !important;
+}
+
+[data-slot="select-content"] > div::-webkit-scrollbar-track {
+  background: transparent !important;
 }
