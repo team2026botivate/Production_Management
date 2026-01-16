@@ -246,4 +246,14 @@ export const initialRawMaterials: RawMaterial[] = [
     shortageQty: 2000,
     status: "Pending",
   },
+  {
+    id: "6",
+    name: "Barrel",
+    bomVersion: "v2.1",
+    standardQtyPerMT: 10,
+    requiredQty: 250,
+    availableStock: 300,
+    shortageQty: 0,
+    status: "Pending",
+  },
 ]

@@ -54,6 +54,22 @@ export default function PackingProductionPage() {
     return Array.from(new Set(indents.map(i => i.partyName))).sort()
   }, [indents])
 
+  const wastageOptions = useMemo(() => {
+    if (!selectedIndentRecord) return []
+    const baseOptions = ["Oil Loss", "Other"]
+    let filteredRMs = ["Rope", "Cartoon", "Tin", "Sticker", "Pouch"]
+    
+    if (selectedIndentRecord.packingType === "Tin") {
+      filteredRMs = ["Rope", "Cartoon", "Tin", "Sticker"]
+    } else if (selectedIndentRecord.packingType === "Pouch") {
+      filteredRMs = ["Rope", "Cartoon", "Pouch", "Sticker"]
+    } else if (selectedIndentRecord.packingType === "Barrel") {
+      filteredRMs = ["Rope", "Cartoon", "Barrel", "Sticker"]
+    }
+    
+    return [...filteredRMs, ...baseOptions]
+  }, [selectedIndentRecord])
+
   // Filter indents based on stage and filters
   const filteredIndentsAvailable = useMemo(() => {
     return indents.filter((indent) => {
@@ -95,16 +111,29 @@ export default function PackingProductionPage() {
         setWastageData(indent.productionWastage || [])
       } else {
         // Initialize consumption data based on the indent's qty and raw material standards
-        const initialConsumption = rawMaterials.map(rm => {
-          const planned = rm.standardQtyPerMT * indent.plannedQuantity
-          return {
-            id: rm.id,
-            name: rm.name,
-            plannedQty: planned,
-            actualConsumedQty: planned,
-            variance: 0
-          }
-        })
+        const initialConsumption = rawMaterials
+          .filter(rm => {
+            if (indent.packingType === "Tin") {
+              return ["Rope", "Cartoon", "Tin", "Sticker"].includes(rm.name)
+            }
+            if (indent.packingType === "Pouch") {
+              return ["Rope", "Cartoon", "Pouch", "Sticker"].includes(rm.name)
+            }
+            if (indent.packingType === "Barrel") {
+              return ["Rope", "Cartoon", "Barrel", "Sticker"].includes(rm.name)
+            }
+            return true
+          })
+          .map(rm => {
+            const planned = rm.standardQtyPerMT * indent.plannedQuantity
+            return {
+              id: rm.id,
+              name: rm.name,
+              plannedQty: planned,
+              actualConsumedQty: planned,
+              variance: 0
+            }
+          })
         
         setConsumptionData(initialConsumption)
         setWastageData([{ id: "1", rawMaterial: "", quantity: 0, remarks: "" }])
@@ -394,13 +423,11 @@ export default function PackingProductionPage() {
                                     <SelectValue placeholder="Select wastage source" />
                                   </SelectTrigger>
                                   <SelectContent className="rounded-2xl border-border/40 font-medium">
-                                    <SelectItem value="Rope" className="rounded-xl focus:bg-primary/5 focus:text-primary">Rope</SelectItem>
-                                    <SelectItem value="Cartoon" className="rounded-xl focus:bg-primary/5 focus:text-primary">Cartoon</SelectItem>
-                                    <SelectItem value="Tin" className="rounded-xl focus:bg-primary/5 focus:text-primary">Tin</SelectItem>
-                                    <SelectItem value="Sticker" className="rounded-xl focus:bg-primary/5 focus:text-primary">Sticker</SelectItem>
-                                    <SelectItem value="Pouch" className="rounded-xl focus:bg-primary/5 focus:text-primary">Pouch</SelectItem>
-                                    <SelectItem value="Oil Loss" className="rounded-xl focus:bg-primary/5 focus:text-primary">Oil Loss (Spillage)</SelectItem>
-                                    <SelectItem value="Other" className="rounded-xl focus:bg-primary/5 focus:text-primary">Other</SelectItem>
+                                    {wastageOptions.map(option => (
+                                      <SelectItem key={option} value={option} className="rounded-xl focus:bg-primary/5 focus:text-primary">
+                                        {option === "Oil Loss" ? "Oil Loss (Spillage)" : option}
+                                      </SelectItem>
+                                    ))}
                                   </SelectContent>
                                 </Select>
                               </div>

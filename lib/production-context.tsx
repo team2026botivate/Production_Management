@@ -55,8 +55,10 @@ export function ProductionProvider({ children }: { children: ReactNode }) {
         const parsed = JSON.parse(saved)
         if (parsed.indents) setIndents(parsed.indents)
         if (parsed.rawMaterials) {
+          const hasBarrel = parsed.rawMaterials.some((rm: any) => rm.name === "Barrel")
           const isOldData = parsed.rawMaterials.some((rm: any) => rm.name === "Rice Bran")
-          if (isOldData) {
+          
+          if (isOldData || !hasBarrel) {
             setRawMaterials(initialRawMaterials)
           } else {
             setRawMaterials(parsed.rawMaterials)

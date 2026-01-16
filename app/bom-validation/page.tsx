@@ -65,13 +65,26 @@ export default function BOMValidationPage() {
       setApprovalRemarks(selectedIndent.bomRemarks || "")
       
       // Initialize editable materials
-      const initial = rawMaterials.map(rm => {
-        const required = rm.standardQtyPerMT * selectedIndent.plannedQuantity
-        return {
-          ...rm,
-          requiredQty: required,
-        }
-      })
+      const initial = rawMaterials
+        .filter(rm => {
+          if (selectedIndent.packingType === "Tin") {
+            return ["Rope", "Cartoon", "Tin", "Sticker"].includes(rm.name)
+          }
+          if (selectedIndent.packingType === "Pouch") {
+            return ["Rope", "Cartoon", "Pouch", "Sticker"].includes(rm.name)
+          }
+          if (selectedIndent.packingType === "Barrel") {
+            return ["Rope", "Cartoon", "Barrel", "Sticker"].includes(rm.name)
+          }
+          return true
+        })
+        .map(rm => {
+          const required = rm.standardQtyPerMT * selectedIndent.plannedQuantity
+          return {
+            ...rm,
+            requiredQty: required,
+          }
+        })
       setEditableMaterials(initial)
     }
   }, [selectedIndent, rawMaterials])
